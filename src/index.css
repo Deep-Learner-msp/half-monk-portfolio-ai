@@ -112,35 +112,35 @@
 
 /* Enhanced animations for Vantablack */
 @keyframes fade-in {
-  '0%': {
-    opacity: '0',
-    transform: 'translateY(20px)'
-  },
-  '100%': {
-    opacity: '1',
-    transform: 'translateY(0)'
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes fade-in-up {
-  '0%': {
-    opacity: '0',
-    transform: 'translateY(30px)'
-  },
-  '100%': {
-    opacity: '1',
-    transform: 'translateY(0)'
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes slide-in-right {
-  '0%': {
-    opacity: '0',
-    transform: 'translateX(30px)'
-  },
-  '100%': {
-    opacity: '1',
-    transform: 'translateX(0)'
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -154,4 +154,12 @@
 
 .animate-slide-in-right {
   animation: slide-in-right 0.6s ease-out;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

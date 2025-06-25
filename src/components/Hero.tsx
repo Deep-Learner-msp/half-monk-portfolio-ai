@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Mail } from 'lucide-react';
+import { ArrowDown, Mail, Phone } from 'lucide-react';
 
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -20,8 +20,8 @@ export const Hero = () => {
             backgroundImage: `url('/lovable-uploads/6836d5dd-f4fa-444a-ab1e-2d8223b8cff1.png')`
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/90"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90"></div>
       </div>
 
       {/* Subtle Geometric Elements */}
@@ -36,7 +36,7 @@ export const Hero = () => {
         <div className="animate-fade-in">
           <div className="mb-8">
             <span className="inline-block px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium rounded-full mb-4">
-              AI Scientist & Principal Architect
+              Chief AI Architect & Research Lead
             </span>
           </div>
           
@@ -45,18 +45,18 @@ export const Hero = () => {
           </h1>
           
           <p className="text-xl sm:text-2xl text-gray-200 mb-4 max-w-4xl mx-auto leading-relaxed">
-            Solving Real Problems | AI + Cybersecurity + Blockchain + Mental Health
+            Strategic Problem Solver | AI + Cybersecurity + Mental Health
           </p>
           
           <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
-            <span className="font-mono text-white border-b border-white/30">Half Monk, Half Machine</span> | Building What Matters
+            <span className="font-mono text-white border-b border-white/30">Chief AI Scientist</span> | Building What Scales, Leading What Delivers
           </p>
 
           <div className="mb-12">
             <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed text-lg">
-              I'm an AI Scientist and strategic problem solver building AI-powered cybersecurity solutions 
-              that directly tackle today's most pressing digital threats — from identity compromise to 
-              mental burnout in security teams.
+              7+ years of turning complex AI problems into scalable, production-ready solutions across 
+              finance, cybersecurity, and health-tech. I lead high-performing teams and bridge deep research 
+              with real-world execution that drives measurable impact.
             </p>
           </div>
 
