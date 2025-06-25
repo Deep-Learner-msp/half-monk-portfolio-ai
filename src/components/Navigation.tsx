@@ -34,11 +34,11 @@ export const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-black/95 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold gradient-text">MSP Raja</div>
+          <div className="text-2xl font-bold text-white">MSP Raja</div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
@@ -46,9 +46,10 @@ export const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className="text-gray-300 hover:text-white transition-colors duration-200 font-medium relative group"
               >
                 {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
           </div>
@@ -57,7 +58,7 @@ export const Navigation = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="md:hidden"
+            className="md:hidden text-white hover:bg-white/10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -66,12 +67,12 @@ export const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-md rounded-lg shadow-lg mt-2 p-4">
+          <div className="md:hidden bg-black/95 backdrop-blur-md rounded-lg border border-white/10 mt-2 p-4">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className="block w-full text-left py-2 text-gray-300 hover:text-white transition-colors duration-200 font-medium"
               >
                 {item.label}
               </button>
