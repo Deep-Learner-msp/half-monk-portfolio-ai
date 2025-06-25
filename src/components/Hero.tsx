@@ -11,18 +11,17 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
       {/* Professional Background Image with Enhanced Overlay */}
       <div className="absolute inset-0">
         <div 
-          className="w-full h-full bg-cover bg-center bg-no-repeat"
+          className="w-full h-full bg-cover bg-center bg-no-repeat opacity-20"
           style={{
-            backgroundImage: `url('/lovable-uploads/75d1c815-0368-459c-bcd3-70f553357059.png')`
+            backgroundImage: `url('/lovable-uploads/2669c4ec-f365-4477-9fd2-9352299d69fc.png')`
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/98 via-black/85 to-black/98"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/95"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-transparent to-black/95"></div>
       </div>
 
       {/* Enhanced Geometric Elements with Animations */}
@@ -76,7 +75,7 @@ export const Hero = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="group border-2 border-white/40 text-white hover:bg-white/15 hover:border-white px-10 py-5 text-lg smooth-transition bg-transparent font-medium backdrop-blur-sm hover:scale-105 transition-all duration-300"
+              className="group border-2 border-white/60 text-white hover:bg-white/15 hover:border-white px-10 py-5 text-lg smooth-transition bg-transparent font-medium backdrop-blur-sm hover:scale-105 transition-all duration-300"
               onClick={() => scrollToSection('about')}
             >
               Learn More
