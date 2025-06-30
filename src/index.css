@@ -68,11 +68,13 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-black text-white font-inter antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
   }
 }
 
@@ -85,9 +87,22 @@
   font-family: 'JetBrains Mono', monospace;
 }
 
+/* Mobile-first responsive typography */
+@media (max-width: 640px) {
+  .text-responsive {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+    line-height: 1.5;
+  }
+  
+  .heading-responsive {
+    font-size: clamp(2rem, 8vw, 3rem);
+    line-height: 1.2;
+  }
+}
+
 /* Enhanced Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -286,6 +301,23 @@
   transform: scale(1.05);
 }
 
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .vanta-glow {
+    box-shadow: 
+      0 0 30px rgba(255, 255, 255, 0.06),
+      0 0 60px rgba(255, 255, 255, 0.03);
+  }
+  
+  .glass {
+    backdrop-filter: blur(15px);
+  }
+  
+  .glass-strong {
+    backdrop-filter: blur(20px);
+  }
+}
+
 /* Text Selection */
 ::selection {
   background: rgba(255, 255, 255, 0.2);
@@ -298,4 +330,9 @@ a:focus-visible {
   outline: 2px solid rgba(255, 255, 255, 0.5);
   outline-offset: 2px;
   border-radius: 4px;
+}
+
+/* Prevent horizontal scroll on mobile */
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
