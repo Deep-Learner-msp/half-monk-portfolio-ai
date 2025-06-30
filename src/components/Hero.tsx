@@ -17,7 +17,7 @@ export const Hero = () => {
         <div 
           className="w-full h-full bg-cover bg-center bg-no-repeat opacity-20 scale-110 md:scale-100"
           style={{
-            backgroundImage: `url('/public/lovable-uploads/6836d5dd-f4fa-444a-ab1e-2d8223b8cff1.png')`
+            backgroundImage: `url('/lovable-uploads/6836d5dd-f4fa-444a-ab1e-2d8223b8cff1.png')`
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/95"></div>
