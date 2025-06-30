@@ -16,6 +16,16 @@ export const Publications = () => {
       link: '#'
     },
     {
+      title: 'T2I-RISE: Text-to-Insights with Reinforcement learning, Integration of Semantic layers and Enrichment - A Comprehensive Approach with Conversational Context and Feedback Systems',
+      venue: '2024 IEEE International Conference on Big Data (BigData)',
+      year: '2024',
+      type: 'Conference Paper',
+      description: 'A comprehensive approach combining reinforcement learning with semantic integration for text-to-insights generation with conversational context and feedback systems.',
+      topics: ['Reinforcement Learning', 'Semantic Analysis', 'Text-to-Insights', 'Conversational AI'],
+      status: 'Published',
+      link: 'https://ieeexplore.ieee.org/document/10825844'
+    },
+    {
       title: 'Generative AI Approach to Distributed Summarisation of Financial Narratives',
       venue: 'IEEE International Conference on Big Data 2023',
       year: '2023',
@@ -161,7 +171,7 @@ export const Publications = () => {
               <h3 className="text-2xl font-bold mb-4">Research Impact</h3>
               <div className="grid sm:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-2">6+</div>
+                  <div className="text-3xl font-bold mb-2">7+</div>
                   <div className="text-gray-300">Publications</div>
                 </div>
                 <div className="text-center">
