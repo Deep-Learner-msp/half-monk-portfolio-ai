@@ -31,7 +31,7 @@ export const Contact = () => {
       icon: <Github className="w-6 h-6" />,
       label: 'GitHub',
       value: 'github.com/mspraja',
-      link: 'https://www.github.com/mspraja',
+      link: 'https://github.com/Deep-Learner-msp',
       color: 'text-gray-600'
     },
     {
