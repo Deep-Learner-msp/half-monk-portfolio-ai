@@ -1,4 +1,3 @@
-
 import { MagicCard } from '@/components/magicui/magic-card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, MapPin, Building } from 'lucide-react';
@@ -110,8 +109,7 @@ export const Experience = () => {
           {experiences.map((exp, index) => (
             <MagicCard 
               key={index} 
-              className="animate-fade-in-up rounded-2xl"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`animate-fade-in-up rounded-2xl delay-${index * 100}`}
               gradientColor="#1a1a1a"
               gradientFrom="#3b82f6"
               gradientTo="#8b5cf6"
