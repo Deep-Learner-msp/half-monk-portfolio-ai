@@ -1,89 +1,116 @@
 
 import { Card, CardContent } from '@/components/ui/card';
+import { GlowingEffect } from '@/components/ui/glowing-effect';
 import { Badge } from '@/components/ui/badge';
 
 export const Skills = () => {
   const skillCategories = [
     {
-      category: 'AI & Machine Learning',
-      skills: ['Natural Language Processing', 'Computer Vision', 'Speech Recognition', 'Generative AI', 'Large Language Models', 'Deep Learning', 'MLOps', 'Reinforcement Learning', 'Active Learning', 'Multi-modal AI'],
-      color: 'bg-blue-100 text-blue-800'
+      title: "AI & Machine Learning",
+      skills: [
+        { name: "Natural Language Processing", color: "text-blue-400" },
+        { name: "Computer Vision", color: "text-blue-400" },
+        { name: "Speech Recognition", color: "text-blue-400" },
+        { name: "Generative AI", color: "text-blue-400" },
+        { name: "Large Language Models", color: "text-blue-400" },
+        { name: "Deep Learning", color: "text-blue-400" },
+        { name: "Reinforcement Learning", color: "text-blue-400" },
+        { name: "Active Learning", color: "text-blue-400" },
+        { name: "Multi-modal AI", color: "text-blue-400" },
+        { name: "MLOps", color: "text-blue-400" }
+      ]
     },
     {
-      category: 'Cybersecurity',
-      skills: ['Identity & Access Management', 'Threat Detection', 'Behavioral Analytics', 'MITRE ATT&CK', 'Cyber Kill Chain', 'Vulnerability Assessment', 'Intrusion Detection', 'Malware Analysis', 'Security Posture Management'],
-      color: 'bg-purple-100 text-purple-800'
+      title: "Cybersecurity",
+      skills: [
+        { name: "Identity & Access Management", color: "text-purple-400" },
+        { name: "Threat Detection", color: "text-purple-400" },
+        { name: "Behavioral Analytics", color: "text-purple-400" },
+        { name: "MITRE ATT&CK", color: "text-red-400" },
+        { name: "Cyber Kill Chain", color: "text-purple-400" },
+        { name: "Vulnerability Assessment", color: "text-purple-400" },
+        { name: "Intrusion Detection", color: "text-purple-400" },
+        { name: "Malware Analysis", color: "text-purple-400" },
+        { name: "Security Posture Management", color: "text-purple-400" }
+      ]
     },
     {
-      category: 'Blockchain & Infrastructure',
-      skills: ['Decentralized Identity', 'Smart Contracts', 'Blockchain Security', 'Distributed Systems', 'Kubernetes', 'Docker', 'CI/CD', 'Cloud Platforms', 'Microservices'],
-      color: 'bg-green-100 text-green-800'
+      title: "Blockchain & Infrastructure",
+      skills: [
+        { name: "Decentralized Identity", color: "text-green-400" },
+        { name: "Smart Contracts", color: "text-green-400" },
+        { name: "Blockchain Security", color: "text-green-400" }
+      ]
     },
     {
-      category: 'Programming & Frameworks',
-      skills: ['Python', 'TensorFlow', 'PyTorch', 'Transformers', 'FastAPI', 'React', 'Node.js', 'SQL', 'NoSQL', 'Apache Spark', 'Elasticsearch', 'MongoDB'],
-      color: 'bg-orange-100 text-orange-800'
-    },
-    {
-      category: 'Research & Domain Expertise',
-      skills: ['Document Intelligence', 'Financial NLP', 'Multilingual Systems', 'Mental Health Analytics', 'Annotation Platforms', 'Data Engineering', 'Statistical Analysis', 'A/B Testing'],
-      color: 'bg-pink-100 text-pink-800'
-    },
-    {
-      category: 'Leadership & Strategy',
-      skills: ['Team Leadership', 'Product Strategy', 'Technical Architecture', 'Cross-functional Collaboration', 'Stakeholder Management', 'Innovation Management', 'Agile Methodologies'],
-      color: 'bg-indigo-100 text-indigo-800'
+      title: "Programming & Frameworks",
+      skills: [
+        { name: "Python", color: "text-yellow-400" },
+        { name: "TensorFlow", color: "text-orange-400" },
+        { name: "PyTorch", color: "text-orange-400" },
+        { name: "Transformers", color: "text-orange-400" },
+        { name: "FastAPI", color: "text-orange-400" },
+        { name: "React", color: "text-cyan-400" }
+      ]
     }
   ];
 
-  const certifications = [
-    'Generative AI with Large Language Models',
-    'Python for Data Science and Machine Learning Bootcamp',
-    'Fundamentals of MCP',
-    'Machine Learning Nano Degree',
-    'Python 101 for Data Science from CognitiveClass.ai'
-  ];
-
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6 gradient-text">Skills & Expertise</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive expertise spanning the full AI lifecycle — from research and model design 
-            to deployment via MLOps pipelines, with deep domain knowledge in cybersecurity and mental health.
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-white">Skills & Expertise</h2>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Comprehensive expertise spanning the full AI lifecycle — from research and 
+            model design to deployment via MLOps pipelines, with deep domain knowledge 
+            in cybersecurity and mental health.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {skillCategories.map((category, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 bg-white/80 backdrop-blur-sm animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4 text-gray-800">{category.category}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <Badge key={skillIndex} className={`${category.color} hover:scale-105 transition-transform duration-200`}>
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {skillCategories.map((category, categoryIndex) => (
+            <div key={categoryIndex} className="relative animate-fade-in-up" style={{ animationDelay: `${categoryIndex * 0.1}s` }}>
+              <GlowingEffect disabled={false} className="rounded-2xl" />
+              <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-800/60 bg-gray-900/40 backdrop-blur-sm relative hover:bg-gray-900/60 hover:border-gray-700/80">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold mb-6 text-white group-hover:text-gray-100 transition-colors duration-300">
+                    {category.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-3">
+                    {category.skills.map((skill, skillIndex) => (
+                      <Badge
+                        key={skillIndex}
+                        variant="secondary"
+                        className={`${skill.color} bg-gray-800/50 border border-gray-700/50 hover:bg-gray-700/60 hover:border-gray-600/60 transition-all duration-300 hover:scale-105 cursor-default font-medium px-3 py-1.5 text-sm backdrop-blur-sm`}
+                      >
+                        {skill.name}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
 
-        <Card className="bg-gradient-to-r from-blue-600 to-purple-600 text-white animate-fade-in">
-          <CardContent className="p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center">Professional Certifications</h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {certifications.map((cert, index) => (
-                <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/30 transition-all duration-300">
-                  <p className="font-medium">{cert}</p>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+        <div className="text-center">
+          <div className="relative animate-fade-in">
+            <GlowingEffect disabled={false} className="rounded-2xl" />
+            <Card className="bg-gray-900/40 backdrop-blur-sm border border-gray-800/60 relative hover:bg-gray-900/60 hover:border-gray-700/80 transition-all duration-500 group">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-gray-100 transition-colors duration-300">
+                  Full-Stack AI Excellence
+                </h3>
+                <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto group-hover:text-gray-200 transition-colors duration-300">
+                  From conceptual research to production deployment, I architect and implement 
+                  comprehensive AI solutions that bridge cutting-edge research with real-world 
+                  business impact. My expertise spans the entire technology stack, enabling 
+                  end-to-end delivery of scalable, secure, and innovative AI systems.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </div>
     </section>
   );
