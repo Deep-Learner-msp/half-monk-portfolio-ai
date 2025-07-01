@@ -1,18 +1,18 @@
 
 import {
-  Bell,
-  Calendar,
-  FileText,
-  Globe,
-  Input,
-} from "lucide-react";
+  BellIcon,
+  CalendarIcon,
+  FileTextIcon,
+  GlobeIcon,
+  InputIcon,
+} from "@radix-ui/react-icons";
 
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 
 export const Skills = () => {
   const features = [
     {
-      Icon: FileText,
+      Icon: FileTextIcon,
       name: "AI & Machine Learning",
       description: "Deep expertise in NLP, Computer Vision, LLMs, and MLOps with production-grade implementations.",
       href: "#",
@@ -21,7 +21,7 @@ export const Skills = () => {
       className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
     },
     {
-      Icon: Input,
+      Icon: InputIcon,
       name: "Cybersecurity",
       description: "Identity & Access Management, Threat Detection, MITRE ATT&CK frameworks, and security analytics.",
       href: "#",
@@ -30,7 +30,7 @@ export const Skills = () => {
       className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
     },
     {
-      Icon: Globe,
+      Icon: GlobeIcon,
       name: "Blockchain & DeFi",
       description: "Decentralized Identity, Smart Contracts, and blockchain security implementations.",
       href: "#",
@@ -39,7 +39,7 @@ export const Skills = () => {
       className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
     },
     {
-      Icon: Calendar,
+      Icon: CalendarIcon,
       name: "Programming",
       description: "Python, TensorFlow, PyTorch, React, and full-stack development expertise.",
       href: "#",
@@ -48,7 +48,7 @@ export const Skills = () => {
       className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
     },
     {
-      Icon: Bell,
+      Icon: BellIcon,
       name: "Research & Innovation",
       description: "Published researcher with expertise in advancing AI technologies and breakthrough implementations.",
       href: "#",
