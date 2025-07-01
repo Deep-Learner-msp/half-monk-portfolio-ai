@@ -1,5 +1,5 @@
 
-import { Card, CardContent } from '@/components/ui/card';
+import { MagicCard } from '@/components/magicui/magic-card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, MapPin, Building } from 'lucide-react';
 
@@ -96,11 +96,11 @@ export const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6 gradient-text">Experience</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-white">Experience</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             A journey through innovative AI solutions across cybersecurity, fintech, and technology domains, 
             consistently delivering production-grade systems and breakthrough research.
           </p>
@@ -108,16 +108,23 @@ export const Experience = () => {
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-              <CardContent className="p-8">
+            <MagicCard 
+              key={index} 
+              className="animate-fade-in-up rounded-2xl"
+              style={{ animationDelay: `${index * 0.1}s` }}
+              gradientColor="#1a1a1a"
+              gradientFrom="#3b82f6"
+              gradientTo="#8b5cf6"
+            >
+              <div className="p-8 bg-gray-900/40 backdrop-blur-sm rounded-2xl border border-gray-800/60">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                   <div className="flex-1 mb-4 lg:mb-0">
                     <div className="flex items-center mb-2">
-                      <Building className="w-5 h-5 text-blue-600 mr-2" />
-                      <h3 className="text-2xl font-bold text-gray-800">{exp.company}</h3>
+                      <Building className="w-5 h-5 text-blue-400 mr-2" />
+                      <h3 className="text-2xl font-bold text-white">{exp.company}</h3>
                     </div>
-                    <h4 className="text-xl font-semibold text-blue-600 mb-2">{exp.role}</h4>
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-gray-600 mb-4">
+                    <h4 className="text-xl font-semibold text-blue-400 mb-2">{exp.role}</h4>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-gray-400 mb-4">
                       <div className="flex items-center">
                         <Calendar className="w-4 h-4 mr-1" />
                         <span className="text-sm font-medium">{exp.duration}</span>
@@ -130,32 +137,32 @@ export const Experience = () => {
                   </div>
                 </div>
 
-                <p className="text-gray-700 mb-6 leading-relaxed">{exp.description}</p>
+                <p className="text-gray-300 mb-6 leading-relaxed">{exp.description}</p>
 
                 <div className="mb-6">
-                  <h5 className="text-lg font-semibold text-gray-800 mb-3">Key Achievements:</h5>
+                  <h5 className="text-lg font-semibold text-white mb-3">Key Achievements:</h5>
                   <ul className="space-y-2">
                     {exp.achievements.map((achievement, achievementIndex) => (
                       <li key={achievementIndex} className="flex items-start">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-gray-700">{achievement}</span>
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <span className="text-gray-300">{achievement}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 <div>
-                  <h5 className="text-lg font-semibold text-gray-800 mb-3">Technologies:</h5>
+                  <h5 className="text-lg font-semibold text-white mb-3">Technologies:</h5>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} className="bg-gradient-to-r from-blue-100 to-purple-100 text-gray-800 hover:from-blue-200 hover:to-purple-200 transition-all duration-200">
+                      <Badge key={techIndex} className="bg-gray-800/50 text-gray-300 hover:bg-gray-700/60 border border-gray-700/50 transition-all duration-200">
                         {tech}
                       </Badge>
                     ))}
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </MagicCard>
           ))}
         </div>
       </div>
