@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -8,56 +7,56 @@
 @layer base {
   :root {
     --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 3%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 90%;
 
-    --popover: 0 0% 3%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 90%;
 
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 0 0% 90%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 0 0% 6%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 0 0% 8%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 0 0% 8%;
-    --accent-foreground: 0 0% 95%;
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 90%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 15%;
+    --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 0 0% 100%;
+    --ring: 0 0% 90%;
 
     --radius: 0.75rem;
   }
 
   .dark {
     --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-    --card: 0 0% 3%;
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 3%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 6%;
-    --secondary-foreground: 0 0% 95%;
-    --muted: 0 0% 8%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 0 0% 8%;
-    --accent-foreground: 0 0% 95%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 90%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 90%;
+    --primary: 0 0% 90%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 90%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 15%;
+    --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 0 0% 100%;
+    --ring: 0 0% 90%;
   }
 }
 
@@ -72,7 +71,7 @@
   }
 
   body {
-    @apply bg-black text-white font-inter antialiased;
+    @apply bg-black text-gray-100 font-inter antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     overflow-x: hidden;
   }
@@ -119,20 +118,20 @@
   background: linear-gradient(45deg, #2a2a2a, #505050);
 }
 
-/* Professional Glassmorphism */
+/* Enhanced Dark Glassmorphism */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(15, 15, 15, 0.6);
   backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(128, 128, 128, 0.15);
 }
 
 .glass-strong {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(20, 20, 20, 0.8);
   backdrop-filter: blur(30px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(128, 128, 128, 0.2);
 }
 
-/* Smooth Professional Transitions */
+/* Enhanced Micro Animations */
 .smooth-transition {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -141,30 +140,37 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Professional Card Styles */
+/* Dark Card Styles with Micro Animations */
 .vanta-card {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(15, 15, 15, 0.6);
   backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  transition: all 0.3s ease;
+}
+
+.vanta-card:hover {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  transform: translateY(-2px);
 }
 
 .vanta-card-hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(20, 20, 20, 0.8);
   backdrop-filter: blur(30px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(128, 128, 128, 0.15);
 }
 
 .vanta-glow {
   box-shadow: 
-    0 0 60px rgba(255, 255, 255, 0.08),
-    0 0 120px rgba(255, 255, 255, 0.04);
+    0 0 60px rgba(128, 128, 128, 0.1),
+    0 0 120px rgba(128, 128, 128, 0.05);
 }
 
 .vanta-glow-strong {
   box-shadow: 
-    0 0 80px rgba(255, 255, 255, 0.12),
-    0 0 160px rgba(255, 255, 255, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 0 80px rgba(128, 128, 128, 0.15),
+    0 0 160px rgba(128, 128, 128, 0.08),
+    inset 0 1px 0 rgba(128, 128, 128, 0.1);
 }
 
 /* Enhanced Professional Animations */
@@ -232,7 +238,7 @@
   }
 }
 
-/* Animation Classes */
+/* Enhanced Micro Animation Classes */
 .animate-fade-in {
   animation: fade-in 0.8s ease-out;
 }
@@ -255,6 +261,46 @@
 
 .animate-glow-pulse {
   animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* Micro Interaction Animations */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes subtle-pulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes micro-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtle-float 4s ease-in-out infinite;
+}
+
+.animate-subtle-pulse {
+  animation: subtle-pulse 2s ease-in-out infinite;
+}
+
+.animate-micro-bounce {
+  animation: micro-bounce 1s ease-in-out infinite;
 }
 
 /* Delay Classes */
@@ -284,13 +330,13 @@
   background-clip: text;
 }
 
-/* Professional Hover Effects */
+/* Enhanced Dark Hover Effects */
 .hover-lift {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
-  transform: translateY(-8px);
+  transform: translateY(-4px);
 }
 
 .hover-scale {
@@ -298,7 +344,15 @@
 }
 
 .hover-scale:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(128, 128, 128, 0.2);
 }
 
 /* Mobile optimizations */
