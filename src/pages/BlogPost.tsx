@@ -4,9 +4,15 @@ import { Calendar, Clock, ArrowLeft, TrendingUp, Target, Lightbulb, Award } from
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { getBlogPostById } from '@/data/blogPosts';
+import TechnicalBlogPost from './TechnicalBlogPost';
 
 const BlogPost = () => {
   const { id } = useParams<{ id: string }>();
+
+  // Route to technical post component for specific IDs
+  if (id === '004-ai-adversarial-defense') {
+    return <TechnicalBlogPost />;
+  }
 
   const post = id ? getBlogPostById(id) : undefined;
 

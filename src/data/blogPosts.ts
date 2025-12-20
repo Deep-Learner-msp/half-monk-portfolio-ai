@@ -44,13 +44,22 @@ export interface BlogPostContent {
 // Blog post listings for the main blog page
 export const blogPostsMetadata: BlogPostMetadata[] = [
   {
+    id: '004-ai-adversarial-defense',
+    title: 'Defending AI Systems Against Adversarial Attacks: A Practical Implementation Guide',
+    excerpt: 'Real-world code and architecture for protecting production ML models from data poisoning, model evasion, and prompt injection attacks with threat analysis and layered defense strategies.',
+    category: 'Cybersecurity',
+    date: '2025-12-20',
+    readTime: '15 min',
+    featured: true,
+  },
+  {
     id: '001-agentic-workflows-supply-chain',
     title: 'Building Agentic Workflows for Supply Chain Automation',
     excerpt: 'How autonomous agents are transforming supply chain operations with intelligent orchestration, reducing manual intervention by 67% and improving visibility across logistics networks.',
     category: 'Supply Chain AI',
     date: '2025-12-20',
     readTime: '8 min',
-    featured: true,
+    featured: false,
   },
   {
     id: '002-voice-enabled-supply-chain',
