@@ -5,9 +5,25 @@ import { Calendar, MapPin, Building } from 'lucide-react';
 export const Experience = () => {
   const experiences = [
     {
+      company: 'FourKites',
+      role: 'Principal AI R&D Solutions Engineer',
+      duration: 'October 2025 - Present',
+      location: 'Hyderabad, Telangana, India',
+      description: 'Leading AI research and development of next-generation supply chain solutions, focusing on agentic workflows, voice-enabled systems, and intelligent document processing platforms.',
+      achievements: [
+        'Building Agentic Workflow Platform for supply chain automation and orchestration',
+        'Developing Voice-Enabled Agents for hands-free supply chain operations',
+        'Creating Agentic Supply Chain Contracts Document Extraction Platform using advanced NLP',
+        'Engineering Sales Prospects Engine to optimize internal team prospecting and deal conversions',
+        'Researching and implementing cutting-edge AI techniques for supply chain visibility',
+        'Driving innovation in multimodal AI systems for logistics and transportation'
+      ],
+      technologies: ['Agentic AI', 'Voice AI', 'Document Intelligence', 'Sales AI', 'Supply Chain AI', 'LLMs', 'Multimodal AI']
+    },
+    {
       company: 'Infosec K2K',
       role: 'Principal AI Scientist and Architect',
-      duration: 'October 2024 - Present',
+      duration: 'October 2024 - September 2025',
       location: 'Hyderabad, Telangana, India',
       description: 'Leading applied AI research and product development with focus on solving real-world cybersecurity problems, especially in Identity and Access Management (IAM) domain.',
       achievements: [
