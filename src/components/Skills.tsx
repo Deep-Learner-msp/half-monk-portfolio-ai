@@ -6,6 +6,7 @@ import {
   GlobeIcon,
   InputIcon,
 } from "@radix-ui/react-icons";
+import { Package, DollarSign, Brain, Sparkles } from "lucide-react";
 
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 
@@ -18,25 +19,43 @@ export const Skills = () => {
       href: "#",
       cta: "Explore",
       background: <div className="absolute -right-20 -top-20 w-40 h-40 bg-gradient-to-br from-blue-500/20 to-purple-500/20 blur-3xl rounded-full" />,
-      className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
+      className: "lg:row-start-1 lg:row-end-3 lg:col-start-2 lg:col-end-3",
+    },
+    {
+      Icon: Package,
+      name: "Supply Chain AI",
+      description: "Agentic workflows, voice-enabled systems, and intelligent automation for logistics and transportation.",
+      href: "#",
+      cta: "Learn more",
+      background: <div className="absolute -right-20 -top-20 w-40 h-40 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 blur-3xl rounded-full" />,
+      className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2",
+    },
+    {
+      Icon: DollarSign,
+      name: "FinTech & Banking",
+      description: "Enterprise GenAI platforms, document extraction, text-to-SQL systems, and financial analytics.",
+      href: "#",
+      cta: "Discover",
+      background: <div className="absolute -right-20 -top-20 w-40 h-40 bg-gradient-to-br from-emerald-500/20 to-green-500/20 blur-3xl rounded-full" />,
+      className: "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3",
     },
     {
       Icon: InputIcon,
       name: "Cybersecurity",
       description: "Identity & Access Management, Threat Detection, MITRE ATT&CK frameworks, and security analytics.",
       href: "#",
-      cta: "Learn more",
+      cta: "View Details",
       background: <div className="absolute -right-20 -top-20 w-40 h-40 bg-gradient-to-br from-red-500/20 to-orange-500/20 blur-3xl rounded-full" />,
-      className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
+      className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
     },
     {
-      Icon: GlobeIcon,
-      name: "Blockchain & DeFi",
-      description: "Decentralized Identity, Smart Contracts, and blockchain security implementations.",
+      Icon: Brain,
+      name: "Mental Health AI",
+      description: "AI-powered burnout detection, wellness monitoring, and psychological support systems for high-stress teams.",
       href: "#",
-      cta: "Discover",
-      background: <div className="absolute -right-20 -top-20 w-40 h-40 bg-gradient-to-br from-green-500/20 to-emerald-500/20 blur-3xl rounded-full" />,
-      className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
+      cta: "Learn More",
+      background: <div className="absolute -right-20 -top-20 w-40 h-40 bg-gradient-to-br from-pink-500/20 to-rose-500/20 blur-3xl rounded-full" />,
+      className: "lg:col-start-2 lg:col-end-3 lg:row-start-3 lg:row-end-4",
     },
     {
       Icon: CalendarIcon,
@@ -53,7 +72,7 @@ export const Skills = () => {
       description: "Published researcher with expertise in advancing AI technologies and breakthrough implementations.",
       href: "#",
       cta: "Publications",
-      background: <div className="absolute -right-20 -top-20 w-40 h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 blur-3xl rounded-full" />,
+      background: <div className="absolute -right-20 -top-20 w-40 h-40 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 blur-3xl rounded-full" />,
       className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
     },
   ];

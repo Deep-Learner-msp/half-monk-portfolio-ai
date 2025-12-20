@@ -66,11 +66,11 @@ export const About = () => {
               <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 relative">
                 <h3 className="text-2xl font-bold mb-6 text-white">Core Philosophy</h3>
                 <blockquote className="text-lg text-gray-300 italic leading-relaxed">
-                  "I bridge deep AI research with real-world execution. From model design and infrastructure 
-                  to MVP rollout and stakeholder impact — I build what scales, lead what delivers, and ship what matters."
+                  "I bridge deep AI research with real-world execution. From model design and infrastructure
+                  to MVP rollout and stakeholder impact. I build what scales, lead what delivers, and ship what matters."
                 </blockquote>
                 <div className="mt-4 text-sm text-gray-400">
-                  — Turning complex problems into scalable solutions
+                  Turning complex problems into scalable solutions
                 </div>
               </div>
             </div>
