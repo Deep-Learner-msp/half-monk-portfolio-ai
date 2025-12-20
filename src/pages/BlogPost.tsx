@@ -7,6 +7,8 @@ import { getBlogPostById } from '@/data/blogPosts';
 import TechnicalBlogPost from './TechnicalBlogPost';
 import { AnimationPlayer } from '@/components/blog/AnimationPlayer';
 import { TechnicalDeepDive } from '@/components/blog/TechnicalDeepDive';
+import { SEO } from '@/components/SEO';
+import { ArticleStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 
 const BlogPost = () => {
   const { id } = useParams<{ id: string }>();
@@ -240,6 +242,36 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-black">
+      <SEO
+        title={`${post.title} | MSP Raja`}
+        description={post.challenge.description}
+        keywords={[...post.technologies, post.category, 'AI Case Study', 'Machine Learning Implementation']}
+        ogType="article"
+        ogUrl={`https://www.mspraja.com/blog/${post.id}`}
+        canonicalUrl={`https://www.mspraja.com/blog/${post.id}`}
+        article={{
+          publishedTime: post.date,
+          author: 'MSP Raja',
+          section: post.category,
+          tags: post.technologies,
+        }}
+      />
+      <ArticleStructuredData
+        headline={post.title}
+        description={post.challenge.description}
+        datePublished={post.date}
+        author={{ name: 'MSP Raja', url: 'https://www.mspraja.com' }}
+        publisher={{ name: 'MSP Raja Portfolio', logo: 'https://www.mspraja.com/logo.png' }}
+        url={`https://www.mspraja.com/blog/${post.id}`}
+        keywords={post.technologies}
+      />
+      <BreadcrumbStructuredData
+        items={[
+          { name: 'Home', url: 'https://www.mspraja.com/' },
+          { name: 'Blog', url: 'https://www.mspraja.com/blog' },
+          { name: post.title, url: `https://www.mspraja.com/blog/${post.id}` },
+        ]}
+      />
       <Navigation />
 
       <article className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">

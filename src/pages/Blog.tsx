@@ -5,6 +5,8 @@ import { Calendar, Clock, ArrowRight, Filter, Shield, AlertTriangle, Brain, Chec
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { getAllBlogPosts, Category as BlogCategory } from '@/data/blogPosts';
+import { SEO } from '@/components/SEO';
+import { BreadcrumbStructuredData } from '@/components/StructuredData';
 
 type Category = 'All' | BlogCategory;
 
@@ -23,6 +25,20 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-black">
+      <SEO
+        title="AI Case Studies & Technical Deep-Dives | MSP Raja"
+        description="Practical case studies and technical deep-dives in AI, covering cybersecurity, supply chain optimization, mental health AI, and emerging techniques. Real-world implementations with code, architecture, and results."
+        keywords={['AI Case Studies', 'Machine Learning', 'Cybersecurity AI', 'Supply Chain AI', 'Technical Blog', 'Graph Neural Networks', 'Voice AI', 'Adversarial Defense', 'Deep Learning']}
+        ogType="website"
+        ogUrl="https://www.mspraja.com/blog"
+        canonicalUrl="https://www.mspraja.com/blog"
+      />
+      <BreadcrumbStructuredData
+        items={[
+          { name: 'Home', url: 'https://www.mspraja.com/' },
+          { name: 'Blog', url: 'https://www.mspraja.com/blog' },
+        ]}
+      />
       <Navigation />
 
       <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
