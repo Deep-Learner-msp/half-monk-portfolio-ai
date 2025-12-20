@@ -64,8 +64,8 @@ export const Skills = () => {
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-white">Skills & Expertise</h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Comprehensive expertise spanning the full AI lifecycle — from research and 
-            model design to deployment via MLOps pipelines, with deep domain knowledge 
+            Comprehensive expertise spanning the full AI lifecycle, from research and
+            model design to deployment via MLOps pipelines, with deep domain knowledge
             in cybersecurity and mental health.
           </p>
         </div>
