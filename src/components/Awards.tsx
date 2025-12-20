@@ -25,7 +25,7 @@ export const Awards = () => {
       event: 'State Street Global Hackathon',
       year: '2023-2024',
       description: 'Two-time consecutive winner for innovative AI solutions in financial technology, delivering high-impact live product demos.',
-      icon: <Zap className="w-8 h-8 text-purple-600" />,
+      icon: <Zap className="w-8 h-8 text-blue-600" />,
       category: 'Innovation'
     },
     {
@@ -33,7 +33,7 @@ export const Awards = () => {
       event: 'State Street Global Hackathon',
       year: '2024',
       description: 'Received standing ovation for developing a complete Conversation AI assistant problem solution in just 24 hours.',
-      icon: <Award className="w-8 h-8 text-green-600" />,
+      icon: <Award className="w-8 h-8 text-blue-600" />,
       category: 'Outstanding Performance'
     },
     {
@@ -41,7 +41,7 @@ export const Awards = () => {
       event: 'State Street',
       year: '2023',
       description: 'Achieved Bravo Recognition Award for consistently delivering results with integrity and speed across multiple high-impact projects.',
-      icon: <Star className="w-8 h-8 text-red-600" />,
+      icon: <Star className="w-8 h-8 text-yellow-600" />,
       category: 'Professional Excellence'
     }
   ];
@@ -50,9 +50,9 @@ export const Awards = () => {
     const colors = {
       'Research Excellence': 'bg-yellow-100 text-yellow-800',
       'Technical Achievement': 'bg-blue-100 text-blue-800',
-      'Innovation': 'bg-purple-100 text-purple-800',
-      'Outstanding Performance': 'bg-green-100 text-green-800',
-      'Professional Excellence': 'bg-red-100 text-red-800'
+      'Innovation': 'bg-blue-100 text-blue-800',
+      'Outstanding Performance': 'bg-blue-100 text-blue-800',
+      'Professional Excellence': 'bg-yellow-100 text-yellow-800'
     };
     return colors[category] || 'bg-gray-100 text-gray-800';
   };
@@ -103,16 +103,16 @@ export const Awards = () => {
               <div className="text-sm opacity-90">Major Awards</div>
             </CardContent>
           </Card>
-          
-          <Card className="bg-gradient-to-br from-blue-500 to-purple-600 text-white animate-fade-in" style={{ animationDelay: '0.1s' }}>
+
+          <Card className="bg-gradient-to-br from-blue-500 to-blue-700 text-white animate-fade-in" style={{ animationDelay: '0.1s' }}>
             <CardContent className="p-6 text-center">
               <Zap className="w-12 h-12 mx-auto mb-4 opacity-80" />
               <div className="text-3xl font-bold mb-2">2x</div>
               <div className="text-sm opacity-90">Hackathon Winner</div>
             </CardContent>
           </Card>
-          
-          <Card className="bg-gradient-to-br from-green-500 to-teal-600 text-white animate-fade-in" style={{ animationDelay: '0.2s' }}>
+
+          <Card className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <CardContent className="p-6 text-center">
               <Star className="w-12 h-12 mx-auto mb-4 opacity-80" />
               <div className="text-3xl font-bold mb-2">#1</div>
