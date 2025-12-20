@@ -65,9 +65,14 @@ const Blog = () => {
               <Card className="mb-12 group hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden animate-fade-in-up delay-400">
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 h-64 md:h-auto flex items-center justify-center">
-                      <div className="text-center p-8">
-                        <span className="inline-block px-4 py-2 bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-medium rounded-full mb-4">
+                    <div className="relative h-64 md:h-auto overflow-hidden bg-gray-900/60">
+                      <img
+                        src="/images/ai_defense.png"
+                        alt="AI Defense Architecture"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-block px-4 py-2 bg-blue-500/80 backdrop-blur-sm border border-blue-400/50 text-white text-xs font-medium rounded-full shadow-lg">
                           FEATURED CASE STUDY
                         </span>
                       </div>
