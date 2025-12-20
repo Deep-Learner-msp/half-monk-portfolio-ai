@@ -79,15 +79,15 @@ export const About = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {specializations.map((spec, index) => (
-            <div key={index} className="relative animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+            <div key={index} className="relative animate-fade-in-up h-full" style={{ animationDelay: `${index * 0.1}s` }}>
               <GlowingEffect disabled={false} className="rounded-2xl" />
-              <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-white/10 bg-white/5 backdrop-blur-sm relative">
-                <CardContent className="p-6 text-center">
+              <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-white/10 bg-white/5 backdrop-blur-sm relative h-full">
+                <CardContent className="p-6 text-center h-full flex flex-col">
                   <div className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                     {spec.icon}
                   </div>
                   <h3 className="text-lg font-semibold mb-3 text-white">{spec.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{spec.description}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed flex-1">{spec.description}</p>
                 </CardContent>
               </Card>
             </div>

@@ -1,9 +1,7 @@
 
 import { ReactNode } from "react";
-import { ArrowRightIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 
 const BentoGrid = ({
   children,
@@ -30,16 +28,12 @@ const BentoCard = ({
   background,
   Icon,
   description,
-  href,
-  cta,
 }: {
   name: string;
   className: string;
   background: ReactNode;
   Icon: any;
   description: string;
-  href: string;
-  cta: string;
 }) => (
   <div
     key={name}
@@ -60,18 +54,6 @@ const BentoCard = ({
       <p className="max-w-lg text-gray-400">{description}</p>
     </div>
 
-    <div
-      className={cn(
-        "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100",
-      )}
-    >
-      <Button variant="ghost" asChild size="sm" className="pointer-events-auto">
-        <a href={href}>
-          {cta}
-          <ArrowRightIcon className="ml-2 h-4 w-4" />
-        </a>
-      </Button>
-    </div>
     <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-gray-800/10" />
   </div>
 );
