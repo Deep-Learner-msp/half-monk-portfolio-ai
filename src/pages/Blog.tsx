@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Navigation } from '@/components/Navigation';
 import { Link } from 'react-router-dom';
-import { Calendar, Clock, ArrowRight, Filter } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Filter, Shield, AlertTriangle, Brain, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { getAllBlogPosts, Category as BlogCategory } from '@/data/blogPosts';
@@ -65,13 +65,32 @@ const Blog = () => {
               <Card className="mb-12 group hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden animate-fade-in-up delay-400">
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-2 gap-6">
-                    <div className="relative h-64 md:h-auto overflow-hidden bg-gray-900/60">
-                      <img
-                        src="/images/ai_defense.png"
-                        alt="AI Defense Architecture"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute top-4 left-4">
+                    <div className="relative h-64 md:h-auto overflow-hidden bg-gradient-to-br from-red-900/40 via-gray-900/60 to-blue-900/40 p-8 flex items-center justify-center">
+                      {/* Animated grid background */}
+                      <div className="absolute inset-0 opacity-20">
+                        <div className="absolute inset-0" style={{
+                          backgroundImage: 'linear-gradient(rgba(239, 68, 68, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 68, 68, 0.1) 1px, transparent 1px)',
+                          backgroundSize: '30px 30px'
+                        }}></div>
+                      </div>
+
+                      {/* Floating security icons */}
+                      <div className="relative z-10 grid grid-cols-2 gap-4">
+                        <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4 backdrop-blur-sm animate-pulse">
+                          <Shield className="w-8 h-8 text-red-400 mx-auto" />
+                        </div>
+                        <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4 backdrop-blur-sm animate-pulse delay-100">
+                          <AlertTriangle className="w-8 h-8 text-blue-400 mx-auto" />
+                        </div>
+                        <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg p-4 backdrop-blur-sm animate-pulse delay-200">
+                          <Brain className="w-8 h-8 text-purple-400 mx-auto" />
+                        </div>
+                        <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-lg p-4 backdrop-blur-sm animate-pulse delay-300">
+                          <CheckCircle className="w-8 h-8 text-cyan-400 mx-auto" />
+                        </div>
+                      </div>
+
+                      <div className="absolute top-4 left-4 z-20">
                         <span className="inline-block px-4 py-2 bg-blue-500/80 backdrop-blur-sm border border-blue-400/50 text-white text-xs font-medium rounded-full shadow-lg">
                           FEATURED CASE STUDY
                         </span>

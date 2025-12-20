@@ -1,0 +1,17 @@
+# Manim Animation Dependencies
+
+# Core Manim library
+manim>=0.18.0
+
+# Required dependencies (usually installed with manim)
+numpy>=1.21.0
+scipy>=1.7.0
+cairo-python>=1.20.0
+pycairo>=1.20.0
+
+# Optional but recommended
+pillow>=9.0.0  # For image processing
+rich>=10.0.0   # For beautiful terminal output
+
+# Media processing
+ffmpeg-python>=0.2.0

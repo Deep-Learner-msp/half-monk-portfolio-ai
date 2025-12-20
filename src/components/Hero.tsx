@@ -11,7 +11,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
+    <section className="min-h-[85vh] flex items-center justify-center relative overflow-hidden bg-black py-20">
       {/* Dark Background with Subtle Overlay */}
       <div className="absolute inset-0">
         <div 
@@ -57,7 +57,7 @@ export const Hero = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center mb-16 md:mb-20 animate-fade-in-up delay-800 px-4">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center mb-10 md:mb-12 animate-fade-in-up delay-800 px-4">
             <Button 
               size="lg" 
               className="group bg-gray-100 text-black hover:bg-white hover:shadow-2xl px-6 md:px-10 py-3 md:py-5 text-base md:text-lg smooth-transition border-0 font-medium shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto"

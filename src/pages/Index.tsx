@@ -7,6 +7,7 @@ import { Publications } from '@/components/Publications';
 import { Awards } from '@/components/Awards';
 import { Contact } from '@/components/Contact';
 import { Navigation } from '@/components/Navigation';
+import { BlogAnnouncementBanner } from '@/components/BlogAnnouncementBanner';
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
+        <BlogAnnouncementBanner />
         <About />
         <Skills />
         <Experience />
