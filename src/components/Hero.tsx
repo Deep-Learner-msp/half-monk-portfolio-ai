@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Mail, Phone, Bot, Package, Mic, Shield, DollarSign, Brain } from 'lucide-react';
+import { ArrowDown, Mail } from 'lucide-react';
 
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -46,64 +46,15 @@ export const Hero = () => {
             <span className="text-gray-100 font-serif tracking-tight animate-fade-in-up hover:text-white transition-colors duration-500">MSP Raja</span>
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-4 md:mb-6 max-w-5xl mx-auto leading-relaxed font-light animate-fade-in-up delay-200 hover:text-gray-200 transition-colors duration-300">
-            Strategic Problem Solver | Agentic AI + Supply Chain + Cybersecurity + Mental Health + FinTech
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed font-light animate-fade-in-up delay-200">
+            Building AI Solutions That Scale Across Industries
           </p>
 
-          <p className="text-base md:text-xl text-gray-400 mb-8 md:mb-10 max-w-4xl mx-auto animate-fade-in-up delay-400">
-            <span className="font-mono text-gray-200 border-b border-gray-600/40 pb-1 hover:border-gray-500/60 transition-all duration-300">AI Research & Solutions Architect</span> | Building What Scales, Leading What Delivers
-          </p>
-
-          <div className="mb-12 md:mb-16 animate-fade-in-up delay-600">
-            <p className="text-gray-400 max-w-5xl mx-auto leading-relaxed text-base md:text-xl font-light px-2 hover:text-gray-300 transition-colors duration-300">
-              7+ years of transforming complex AI challenges into production-ready solutions across
-              supply chain, finance, cybersecurity, and health-tech. Specializing in agentic workflows,
-              voice-enabled AI, document intelligence, and sales automation. I lead high-performing teams
-              and bridge cutting-edge research with real-world execution that drives measurable impact.
+          <div className="mb-10 md:mb-14 animate-fade-in-up delay-400">
+            <p className="text-gray-400 max-w-4xl mx-auto leading-relaxed text-base md:text-lg font-light px-2">
+              Leading AI research and development of next-generation systems in supply chain, cybersecurity, finance, and mental health.
+              Specializing in agentic workflows, voice AI, and intelligent automation that drives measurable business impact.
             </p>
-          </div>
-
-          <div className="mb-12 md:mb-16 animate-fade-in-up delay-700">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-                <div className="p-5 bg-gray-900/40 backdrop-blur-sm rounded-lg border border-gray-800/60 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 group">
-                  <div className="flex flex-col items-center justify-center">
-                    <Bot className="w-8 h-8 text-gray-400 mb-3 group-hover:text-blue-400 transition-colors duration-300" />
-                    <p className="text-sm text-gray-300 font-medium">Agentic AI</p>
-                  </div>
-                </div>
-                <div className="p-5 bg-gray-900/40 backdrop-blur-sm rounded-lg border border-gray-800/60 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 group">
-                  <div className="flex flex-col items-center justify-center">
-                    <Package className="w-8 h-8 text-gray-400 mb-3 group-hover:text-blue-400 transition-colors duration-300" />
-                    <p className="text-sm text-gray-300 font-medium">Supply Chain</p>
-                  </div>
-                </div>
-                <div className="p-5 bg-gray-900/40 backdrop-blur-sm rounded-lg border border-gray-800/60 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 group">
-                  <div className="flex flex-col items-center justify-center">
-                    <Mic className="w-8 h-8 text-gray-400 mb-3 group-hover:text-blue-400 transition-colors duration-300" />
-                    <p className="text-sm text-gray-300 font-medium">Voice AI</p>
-                  </div>
-                </div>
-                <div className="p-5 bg-gray-900/40 backdrop-blur-sm rounded-lg border border-gray-800/60 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 group">
-                  <div className="flex flex-col items-center justify-center">
-                    <Shield className="w-8 h-8 text-gray-400 mb-3 group-hover:text-blue-400 transition-colors duration-300" />
-                    <p className="text-sm text-gray-300 font-medium">Cybersecurity</p>
-                  </div>
-                </div>
-                <div className="p-5 bg-gray-900/40 backdrop-blur-sm rounded-lg border border-gray-800/60 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 group">
-                  <div className="flex flex-col items-center justify-center">
-                    <DollarSign className="w-8 h-8 text-gray-400 mb-3 group-hover:text-blue-400 transition-colors duration-300" />
-                    <p className="text-sm text-gray-300 font-medium">FinTech</p>
-                  </div>
-                </div>
-                <div className="p-5 bg-gray-900/40 backdrop-blur-sm rounded-lg border border-gray-800/60 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 group">
-                  <div className="flex flex-col items-center justify-center">
-                    <Brain className="w-8 h-8 text-gray-400 mb-3 group-hover:text-blue-400 transition-colors duration-300" />
-                    <p className="text-sm text-gray-300 font-medium">Mental Health</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center mb-16 md:mb-20 animate-fade-in-up delay-800 px-4">
