@@ -7,13 +7,13 @@ export const About = () => {
   const specializations = [
     {
       icon: <Brain className="w-8 h-8 text-white" />,
-      title: 'AI Research & Innovation',
-      description: 'Leading R&D teams, turning complex AI problems into scalable solutions with research-grade outcomes'
+      title: 'Agentic AI Systems',
+      description: 'Building autonomous agent workflows and intelligent automation platforms for enterprise operations'
     },
     {
       icon: <Shield className="w-8 h-8 text-white" />,
-      title: 'Cybersecurity AI',
-      description: 'IAM security posture management, threat intelligence, and behavioral anomaly detection systems'
+      title: 'Supply Chain Intelligence',
+      description: 'Voice-enabled agents, document extraction, and multimodal AI for logistics and transportation'
     },
     {
       icon: <Users className="w-8 h-8 text-white" />,
@@ -22,8 +22,8 @@ export const About = () => {
     },
     {
       icon: <Zap className="w-8 h-8 text-white" />,
-      title: 'Enterprise Solutions',
-      description: 'End-to-end AI platform development from research to production deployment at scale'
+      title: 'Enterprise AI Solutions',
+      description: 'End-to-end platform development from research to production deployment across multiple domains'
     }
   ];
 
@@ -33,29 +33,30 @@ export const About = () => {
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-white">About Me</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Chief AI Scientist and Solutions Architect with 7+ years of experience building and delivering 
-            enterprise-scale AI systems that solve real-world problems.
+            Principal AI R&D Solutions Engineer with 7+ years of experience building and delivering
+            production-grade AI systems across supply chain, finance, cybersecurity, and mental health domains.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="animate-slide-in-right">
-            <h3 className="text-2xl font-bold mb-6 text-white">Strategic Problem Solving & Innovation</h3>
+            <h3 className="text-2xl font-bold mb-6 text-white">Building Next-Generation AI Systems</h3>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                Currently leading <span className="font-semibold text-white">AI research and innovation</span> at Infosec K2K, 
-                where I head the internal AI research lab focused on solving complex problems across 
-                <span className="font-semibold text-white"> cybersecurity, IAM, and mental health</span> through applied AI.
+                Currently at <span className="font-semibold text-white">FourKites</span>, leading AI research and development
+                of cutting-edge supply chain solutions. Building <span className="font-semibold text-white">agentic workflow platforms</span>,
+                <span className="font-semibold text-white"> voice-enabled agents</span>, and intelligent
+                <span className="font-semibold text-white"> document extraction systems</span> that transform supply chain operations.
               </p>
               <p>
-                My expertise spans <span className="font-semibold text-white">IAM security posture management</span>, 
-                <span className="font-semibold text-white"> OSINT threat intelligence</span>, and 
-                <span className="font-semibold text-white"> mental resilience platforms</span> for high-stress operational teams.
+                My expertise spans <span className="font-semibold text-white">agentic AI architectures</span>,
+                <span className="font-semibold text-white"> multimodal systems</span>, and
+                <span className="font-semibold text-white"> production-scale LLM deployments</span> across enterprise environments.
               </p>
               <p>
-                Previously, I architected <span className="font-semibold text-white">enterprise-grade GenAI solutions</span> 
-                at a global financial services company, including no-code AI platforms and state-of-the-art 
-                text-to-SQL systems adopted across multiple business units.
+                Previously built <span className="font-semibold text-white">enterprise GenAI platforms</span> at State Street,
+                <span className="font-semibold text-white"> IAM security solutions</span> at Infosec K2K, and
+                <span className="font-semibold text-white"> AI-powered mental health systems</span> for operational teams.
               </p>
             </div>
           </div>
