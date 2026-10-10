@@ -8,6 +8,9 @@ import type { PubStatus } from '@/content/types';
 import { usePageMeta } from '@/site/meta';
 import { Ring } from '@/site/Ring';
 import { scrollToId } from '@/site/RouteFx';
+import { useActiveToc } from '@/site/useActiveToc';
+import { useScrolled } from '@/site/useScrolled';
+import { useCopy } from '@/site/useCopy';
 import '@/styles/cine.css';
 
 const NAV: [string, string][] = [
@@ -18,6 +21,10 @@ const NAV: [string, string][] = [
   ['Awards', 'awards'],
   ['Contact', 'contact'],
 ];
+
+const NAV_IDS = NAV.map(([, id]) => id);
+/** Height of the frozen bar once solid, so section jumps land below it */
+const BAR_OFFSET = 73;
 
 const FILTERS: [PubStatus | 'All', string][] = [
   ['All', 'All'],
@@ -34,6 +41,9 @@ const DESCRIPTION =
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [pubFilter, setPubFilter] = useState<PubStatus | 'All'>('All');
+  const scrolled = useScrolled();
+  const { copied, copy } = useCopy();
+  const active = useActiveToc(NAV_IDS, { line: 120, allowNone: true });
 
   usePageMeta({
     title: 'MSP Raja · Principal AI R&D Architect · Enterprise AI systems',
@@ -48,7 +58,9 @@ export default function Home() {
     e.preventDefault();
     setMenuOpen(false);
     // Measure after the mobile menu has collapsed, or the target is off by the menu's height.
-    requestAnimationFrame(() => requestAnimationFrame(() => scrollToId(id, 0)));
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => (id === 'top' ? window.scrollTo({ top: 0, behavior: 'smooth' }) : scrollToId(id, BAR_OFFSET))),
+    );
     window.history.replaceState(null, '', id === 'top' ? '/' : '#' + id);
   };
 
@@ -60,22 +72,14 @@ export default function Home() {
   return (
     <div className="cine">
       <div className="cine-inner">
-        <header id="top" className="c-hero">
-          <div aria-hidden="true" className="c-hero-bg" />
-          <div aria-hidden="true" className="c-hero-lines" />
-          <div aria-hidden="true" className="c-hero-img">
-            <img src="/images/site/hero-dog.webp" alt="" fetchPriority="high" />
-            <div className="tint" />
-            <div className="vignette" />
-          </div>
-
+        <div className={'c-bar' + (scrolled || menuOpen ? ' is-solid' : '')}>
           <div className="c-wrap c-topbar">
             <a href="/" onClick={jump('top')} aria-label="MSP Raja, home" className="c-brand">
               MSP RAJA
             </a>
             <nav aria-label="Primary" className="c-nav">
               {NAV.map(([label, id]) => (
-                <a key={id} href={'#' + id} onClick={jump(id)}>
+                <a key={id} href={'#' + id} onClick={jump(id)} className={active === id ? 'is-active' : undefined}>
                   {label}
                 </a>
               ))}
@@ -105,6 +109,18 @@ export default function Home() {
               <Link to="/writing">All writing</Link>
             </nav>
           )}
+        </div>
+
+        <header id="top" className="c-hero">
+          <div aria-hidden="true" className="c-hero-bg" />
+          <div aria-hidden="true" className="c-hero-lines" />
+          <div aria-hidden="true" className="c-hero-img">
+            <img src="/images/site/hero-dog.webp" alt="" fetchPriority="high" />
+            <div className="tint" />
+            <div className="vignette" />
+          </div>
+
+          <div aria-hidden="true" className="c-bar-space" />
 
           <div className="c-wrap c-hero-body">
             <p className="c-kicker c-in" style={{ animationDelay: '.1s' }}>
@@ -416,11 +432,14 @@ export default function Home() {
               </div>
               <ul className="c-award-grid">
                 {awards.map((a, i) => (
-                  <li key={i} className={'c-award c-rise ' + a.accent}>
+                  <li key={i} className={'c-award c-rise ' + a.accent + (a.featured ? ' featured' : '')}>
                     <span aria-hidden="true" className="big">
                       {a.big}
                     </span>
-                    <time dateTime={a.y}>{a.y}</time>
+                    <time dateTime={a.y}>
+                      {a.y}
+                      {a.featured && <span className="new">Latest</span>}
+                    </time>
                     <h3>{a.t}</h3>
                     <p>{a.e}</p>
                   </li>
@@ -430,32 +449,72 @@ export default function Home() {
           </section>
 
           <section id="contact" aria-labelledby="ct-h" className="c-contact">
-            <p aria-hidden="true" className="c-contact-ghost">
-              I reply
-              <br />
-              in writing
-            </p>
+            <div aria-hidden="true" className="c-contact-glow" />
+            <div aria-hidden="true" className="c-contact-lines" />
+            <div aria-hidden="true" className="c-contact-marquee">
+              <div className="track">
+                {[0, 1, 2, 3].map(i => (
+                  <span key={i}>
+                    I reply in writing <i>✦</i>
+                  </span>
+                ))}
+              </div>
+            </div>
+
             <div className="c-wrap c-contact-in">
-              <div className="c-contact-text c-rise c-rise-30">
+              <div className="c-contact-card c-rise c-rise-30">
                 <p className="c-eyebrow blue">Contact</p>
                 <h2 id="ct-h" className="c-h2">
-                  Best reached <em>by email.</em>
+                  Best reached <em className="c-grad-text">by email.</em>
                 </h2>
                 <p className="c-sub">I reply in writing. For research collaboration, reviewing or speaking, write with the specifics.</p>
+
+                <p className="c-contact-label">Write to me about</p>
+                <ul className="c-topics">
+                  <li className="blue">Research collaboration</li>
+                  <li className="red">Reviewing</li>
+                  <li className="violet">Speaking</li>
+                </ul>
+
                 <div className="c-contact-btns">
                   <a href={'mailto:' + EMAIL} className="c-pill c-mailbig">
                     {EMAIL} <span aria-hidden="true">→</span>
                   </a>
-                  <a href={LINKEDIN} target="_blank" rel="noopener" className="c-ghost-btn">
-                    LinkedIn ↗
+                  <button type="button" className="c-copy" onClick={() => copy('email', EMAIL)} aria-live="polite">
+                    {copied === 'email' ? 'Copied ✓' : 'Copy'}
+                  </button>
+                </div>
+
+                <div className="c-link-cards">
+                  <a href={LINKEDIN} target="_blank" rel="noopener me" className="c-link-card">
+                    <span className="k">LinkedIn</span>
+                    <span className="v">in/mspraja</span>
+                    <span aria-hidden="true" className="arr">↗</span>
                   </a>
+                  <a href={GITHUB} target="_blank" rel="noopener me" className="c-link-card">
+                    <span className="k">GitHub</span>
+                    <span className="v">Deep-Learner-msp</span>
+                    <span aria-hidden="true" className="arr">↗</span>
+                  </a>
+                  <Link to="/writing" className="c-link-card">
+                    <span className="k">Writing</span>
+                    <span className="v">Essays and lessons</span>
+                    <span aria-hidden="true" className="arr">→</span>
+                  </Link>
                 </div>
               </div>
+
               <figure className="c-contact-fig c-rise c-rise-30">
-                <div className="img">
-                  <img src="/images/site/office-dog.webp" alt="MSP Raja at his desk with his dog" loading="lazy" />
-                  <div aria-hidden="true" className="tint" />
+                <div className="c-frame">
+                  <div className="img">
+                    <img src="/images/site/office-dog.webp" alt="MSP Raja at his desk with his dog" loading="lazy" />
+                    <div aria-hidden="true" className="tint" />
+                  </div>
                 </div>
+                <figcaption className="c-contact-chip">
+                  <i aria-hidden="true" />
+                  Hyderabad, India
+                </figcaption>
                 <span aria-hidden="true" className="c-contact-ring">
                   <Ring text="WRITE TO ME · I REPLY IN WRITING · " />
                   <span>↗</span>

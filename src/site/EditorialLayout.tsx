@@ -2,6 +2,7 @@ import { createContext, useContext, type ReactNode } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { EMAIL, GITHUB, LINKEDIN } from '@/content/profile';
 import { useTheme, type Theme } from './theme';
+import { useScrolled } from './useScrolled';
 import '@/styles/editorial.css';
 
 const ThemeCtx = createContext<Theme>('dark');
@@ -17,10 +18,12 @@ const NAV: [string, string][] = [
 /** Shell for the reading pages: serif wordmark, primary nav, theme toggle, quiet footer. */
 export function EditorialLayout({ children }: { children: ReactNode }) {
   const { theme, toggle } = useTheme();
+  const scrolled = useScrolled();
   return (
     <ThemeCtx.Provider value={theme}>
       <div className="ed" data-theme={theme}>
         <div className="ed-frame">
+          <div className={'ed-bar' + (scrolled ? ' is-solid' : '')}>
           <header className="ed-header">
             <Link to="/" className="ed-brand">
               MSP Raja
@@ -41,6 +44,7 @@ export function EditorialLayout({ children }: { children: ReactNode }) {
               </button>
             </nav>
           </header>
+          </div>
 
           {children}
 

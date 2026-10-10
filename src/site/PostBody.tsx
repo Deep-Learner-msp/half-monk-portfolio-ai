@@ -3,9 +3,9 @@ import { CodeFigure } from './CodeFigure';
 import { useReadingTheme } from './EditorialLayout';
 import { Inline } from './Inline';
 import { Mermaid } from './Mermaid';
-import { scrollToId } from './RouteFx';
+import { READ_OFFSET, scrollToId } from './RouteFx';
 
-const jump = (n: number) => scrollToId('fn' + n, 32);
+const jump = (n: number) => scrollToId('fn' + n, READ_OFFSET);
 
 /** Renders a post's block list in the editorial reading style. */
 export function PostBody({ blocks }: { blocks: Block[] }) {
