@@ -1,27 +1,22 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Link, useLocation } from 'react-router-dom';
+import { EditorialLayout } from '@/site/EditorialLayout';
+import { usePageMeta } from '@/site/meta';
 
-const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
+export default function NotFound() {
+  const { pathname } = useLocation();
+  usePageMeta({ title: 'Not found · MSP Raja', description: 'This page does not exist.', path: pathname });
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
-      </div>
-    </div>
+    <EditorialLayout>
+      <main className="ed-wrap">
+        <header className="e-page-head">
+          <h1 className="e-h1">Not found</h1>
+          <p className="e-lede">
+            Nothing lives at <code className="e-icode">{pathname}</code>. Try the <Link to="/writing">writing archive</Link> or
+            go <Link to="/">home</Link>.
+          </p>
+        </header>
+      </main>
+    </EditorialLayout>
   );
-};
-
-export default NotFound;
+}
