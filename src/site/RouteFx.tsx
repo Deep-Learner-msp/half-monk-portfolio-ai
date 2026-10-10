@@ -3,6 +3,9 @@ import { useLocation } from 'react-router-dom';
 
 const reducedMotion = () => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
+/** Room left above a heading on the reading pages: frozen header (72px) plus breathing space. */
+export const READ_OFFSET = 96;
+
 /** Scroll to an element id, leaving a little room above it. */
 export function scrollToId(id: string, offset = 24) {
   const el = document.getElementById(id);

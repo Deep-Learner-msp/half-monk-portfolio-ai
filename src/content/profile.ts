@@ -26,7 +26,7 @@ export const career: Role[] = [
     role: 'Principal AI R&D Architect', org: 'FourKites', y: 'Oct 2025 – now', yShort: '2025–now', start: '2025-10', loc: 'Hyderabad', current: true,
     line: 'Office of the CEO. I build lean pods that make FourKites AI-native and take on core supply chain problems end to end.',
     aboutLine: 'Principal AI R&D Architect, Office of the CEO. Agentic systems and evaluation.',
-    points: ['Agent workflow orchestration with explicit state and budgets', 'Autonomous coding harnesses that take a ticket to a reviewed pull request', 'Standardized agent evaluation; 25+ production AI skills deployed across the org'],
+    points: ['Agent workflow orchestration with explicit state and budgets', 'Autonomous coding harnesses that take a ticket to a reviewed pull request', 'Standardized agent evaluation; 25+ production AI skills deployed across the org', 'Won the FourKites Hackathon 2026 with an engineering dashboard built in 24 hours'],
   },
   {
     role: 'Principal AI Scientist and Architect', org: 'Infosec K2K', y: 'Oct 2024 – Sep 2025', yShort: '2024–2025', start: '2024-10', loc: 'Hyderabad',
@@ -62,9 +62,12 @@ export interface Award {
   t: string;
   e: string;
   accent: Accent;
+  /** Spans two columns in the awards grid */
+  featured?: boolean;
 }
 
 export const awards: Award[] = [
+  { y: '2026', big: '24h', t: 'Winner, FourKites Hackathon', e: 'Built an engineering dashboard in 24 hours.', accent: 'amber', featured: true },
   { y: '2024', big: '01', t: 'Winner, State Street Global AI Hackathon', e: 'Second consecutive win, with a live product demo.', accent: 'red' },
   { y: '2024', big: '24h', t: 'Standing Ovation Award', e: 'A complete conversational AI assistant built in 24 hours. State Street Global Hackathon.', accent: 'blue' },
   { y: '2023', big: '01', t: 'Winner, State Street Global AI Hackathon', e: 'First win in the global AI track.', accent: 'red' },
@@ -75,6 +78,7 @@ export const awards: Award[] = [
 
 /** The condensed list on the About page */
 export const awardsShort = [
+  { y: '2026', t: 'Winner, FourKites Hackathon. Built an engineering dashboard in 24 hours.' },
   { y: '2023, 2024', t: 'Winner, State Street Global AI Hackathon' },
   { y: '2024', t: 'Standing Ovation Award, State Street Global Hackathon' },
   { y: '2023', t: 'Bravo Recognition Award, State Street' },
@@ -86,7 +90,7 @@ export const stats = [
   { n: '9+', label: 'Years in AI and ML', col: 1, row: 1, grad: 1 },
   { n: '25+', label: 'Production AI skills deployed', col: 2, row: 2 },
   { n: '7', label: 'Peer-reviewed papers', col: 1, row: 3 },
-  { n: '2×', label: 'State Street Global AI Hackathon winner', col: 3, row: 3, grad: 2 },
+  { n: '3×', label: 'Hackathon winner at FourKites and State Street', col: 3, row: 3, grad: 2 },
   { n: '1', label: 'Patent pending', col: 2, row: 4 },
 ];
 

@@ -6,7 +6,7 @@ import { EditorialLayout } from '@/site/EditorialLayout';
 import { Inline } from '@/site/Inline';
 import { usePageMeta } from '@/site/meta';
 import { PostBody } from '@/site/PostBody';
-import { scrollToId } from '@/site/RouteFx';
+import { READ_OFFSET, scrollToId } from '@/site/RouteFx';
 import { Toc } from '@/site/Toc';
 import { useCopy } from '@/site/useCopy';
 
@@ -97,7 +97,7 @@ function PostView({ post }: { post: Post }) {
                         aria-label={'Back to reference ' + (i + 1)}
                         onClick={e => {
                           e.preventDefault();
-                          scrollToId('r' + (i + 1), 120);
+                          scrollToId('r' + (i + 1), READ_OFFSET + 80);
                         }}
                       >
                         ↩

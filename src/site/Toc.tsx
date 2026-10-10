@@ -1,4 +1,4 @@
-import { scrollToId } from './RouteFx';
+import { READ_OFFSET, scrollToId } from './RouteFx';
 import { useActiveToc } from './useActiveToc';
 
 /** Sticky "On this page" rail for long reads; hidden below 1000px by CSS. */
@@ -15,7 +15,7 @@ export function Toc({ title, items }: { title: string; items: [string, string][]
           className={active === id ? 'is-active' : undefined}
           onClick={e => {
             e.preventDefault();
-            scrollToId(id, 32);
+            scrollToId(id, READ_OFFSET);
           }}
         >
           {label}
